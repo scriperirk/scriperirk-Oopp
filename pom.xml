@@ -40,7 +40,7 @@
                 <version>0.8.5</version>
                 <executions>
                     <execution>
-                        <id>prepare-123</id>
+                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
@@ -62,7 +62,7 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <counter>LINE</counter> // т.к. считает процент выполнения кода в ветках if/else/switch
+                                            <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
                                             <minimum>100%</minimum>
                                         </limit>
