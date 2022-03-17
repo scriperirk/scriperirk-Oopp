@@ -43,7 +43,7 @@ public class RadioTest {
 
         radioBox.setRadioStationNext(9);
 
-        int expected = 9;
+        int expected = 0;
         int actual = radioBox.getRadioStationNext();
 
         assertEquals(expected,actual);
