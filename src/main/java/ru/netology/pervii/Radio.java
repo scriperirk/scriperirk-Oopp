@@ -13,7 +13,7 @@ public class Radio {
     }
 
     public void setRadioStationNext(int newRadioStation) {
-        if (newRadioStation < 10 && newRadioStation > 0) {
+        if (newRadioStation < 10) {
             this.radioStation = newRadioStation + 1;
             return;
         } else {

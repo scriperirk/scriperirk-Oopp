@@ -29,22 +29,7 @@ public class RadioTest {
         radioBox.setRadioStationNext(1);
         //radioBox.currentRadioStationNext();
 
-        int expected = 0;
-        int actual = radioBox.getRadioStationNext();
-
-        assertEquals(expected,actual);
-
-    }
-
-    //нажимаем next (8)
-    @Test
-    public void testNextThree(){
-        Radio radioBox = new Radio();
-
-        radioBox.setRadioStationNext(8);
-        //radioBox.currentRadioStationNext();
-
-        int expected = 0;
+        int expected = 2;
         int actual = radioBox.getRadioStationNext();
 
         assertEquals(expected,actual);
@@ -53,10 +38,25 @@ public class RadioTest {
 
     //нажимаем next (9)
     @Test
-    public void testNextFour(){
+    public void testNextThree(){
         Radio radioBox = new Radio();
 
         radioBox.setRadioStationNext(9);
+        //radioBox.currentRadioStationNext();
+
+        int expected = 9;
+        int actual = radioBox.getRadioStationNext();
+
+        assertEquals(expected,actual);
+
+    }
+
+    //нажимаем next (10)
+    @Test
+    public void testNextFour(){
+        Radio radioBox = new Radio();
+
+        radioBox.setRadioStationNext(10);
         //radioBox.currentRadioStationNext();
 
         int expected = 0;
