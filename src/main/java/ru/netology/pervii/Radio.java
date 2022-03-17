@@ -3,35 +3,39 @@ package ru.netology.pervii;
 public class Radio {
 
     private int radioStation;
-
-    public int getRadioStation() {
+    //увеличение на 1
+    public int getRadioStationNext() {
         return radioStation;
     }
 
-    public void currentRadioStation() {
-        if (this.radioStation > this.radioStation + 1){
-            setRadioStation(this.radioStation + 1);
-        }
-        if (this.radioStation > this.radioStation - 1){
-            setRadioStation(this.radioStation - 1);
-        }
+    public void currentRadioStationNext() {
+        setRadioStationNext(radioStation);
     }
 
-    public void setRadioStation(int radioStation) {
-        if (radioStation < 10 && radioStation > 0) {
-            this.radioStation = radioStation;
-        }
-        else {
+    public void setRadioStationNext(int newRadioStation) {
+        if (newRadioStation < 10 && newRadioStation > 0) {
+            this.radioStation = newRadioStation + 1;
+            return;
+        } else {
             this.radioStation = 0;
+            return;
         }
-
-        //if (radioStation > 0) {
-        //   this.radioStation = radioStation;
-        //}
-        //else {
-        //    this.radioStation = 9;
-        // }
+    }
+    //уменьшение на 1
+    public int getRadioStationPrev() {
+        return radioStation;
     }
 
-
+    public void currentRadioStationPrev() {
+        setRadioStationPrev(radioStation);
+    }
+    public void setRadioStationPrev(int newRadioStation) {
+        if (newRadioStation < 10 && newRadioStation > 0) {
+            this.radioStation = newRadioStation - 1;
+            return;
+        } else {
+            this.radioStation = 9;
+            return;
+        }
+    }
 }
