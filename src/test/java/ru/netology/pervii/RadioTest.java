@@ -14,9 +14,8 @@ public class RadioTest {
         Radio radioBox = new Radio();
 
         radioBox.setRadioStationNext(0);
-        //radioBox.currentRadioStationNext();
 
-        int expected = 0;
+        int expected = 1;
         int actual = radioBox.getRadioStationNext();
 
         assertEquals(expected,actual);
@@ -29,7 +28,6 @@ public class RadioTest {
         Radio radioBox = new Radio();
 
         radioBox.setRadioStationNext(1);
-        //radioBox.currentRadioStationNext();
 
         int expected = 2;
         int actual = radioBox.getRadioStationNext();
@@ -44,7 +42,6 @@ public class RadioTest {
         Radio radioBox = new Radio();
 
         radioBox.setRadioStationNext(9);
-        //radioBox.currentRadioStationNext();
 
         int expected = 9;
         int actual = radioBox.getRadioStationNext();
@@ -101,7 +98,6 @@ public class RadioTest {
         Radio radioBox = new Radio();
 
         radioBox.setRadioStationPrev(9);
-        //radioBox.currentRadioStationPrev();
 
         int expected = 8;
         int actual = radioBox.getRadioStationPrev();
@@ -115,7 +111,6 @@ public class RadioTest {
         Radio radioBox = new Radio();
 
         radioBox.setRadioStationPrev(8);
-        //radioBox.currentRadioStationPrev();
 
         int expected = 7;
         int actual = radioBox.getRadioStationPrev();

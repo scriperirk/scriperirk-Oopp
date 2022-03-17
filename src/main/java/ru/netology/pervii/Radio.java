@@ -8,12 +8,9 @@ public class Radio {
         return radioStation;
     }
 
-    public void currentRadioStationNext() {
-        setRadioStationNext(radioStation);
-    }
 
     public void setRadioStationNext(int newRadioStation) {
-        if (newRadioStation < 10) {
+        if (newRadioStation < 9) {
             this.radioStation = newRadioStation + 1;
             return;
         } else {
@@ -21,17 +18,15 @@ public class Radio {
             return;
         }
     }
+
     //уменьшение на 1
     public int getRadioStationPrev() {
         return radioStation;
     }
 
-    public void currentRadioStationPrev() {
-        setRadioStationPrev(radioStation);
-    }
     public void setRadioStationPrev(int newRadioStation) {
         if (newRadioStation < 10 && newRadioStation > 0) {
-            this.radioStation = newRadioStation - 1;
+            this.radioStation = newRadioStation -1;
             return;
         } else {
             this.radioStation = 9;
