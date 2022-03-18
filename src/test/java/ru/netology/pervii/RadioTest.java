@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RadioTest {
-//радиостанции
+    //радиостанции
     @Test
     public void testNextOne() {
         Radio radioBox = new Radio();
@@ -117,7 +117,8 @@ public class RadioTest {
         assertEquals(expected, actual);
 
     }
-//громкость
+
+    //громкость
     @Test
     public void testVolumeNextOne() {
         Radio radioBox = new Radio();

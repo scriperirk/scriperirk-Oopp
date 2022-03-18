@@ -21,7 +21,7 @@ public class Radio {
         }
         if (newRadioStation >= 0 && newRadioStation < 11) {
             this.radioStation = 0;
-         }
+        }
     }
 
     //уменьшение Станций
