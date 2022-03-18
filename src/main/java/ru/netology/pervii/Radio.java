@@ -9,7 +9,7 @@ public class Radio {
         return radioStation;
     }
 
-    public void  increaseNext(){
+    public void increaseNext() {
         setRadioStationNext(radioStation + 1);
     }
 
@@ -18,7 +18,7 @@ public class Radio {
             this.radioStation = newRadioStation;
             return;
         }
-        if (newRadioStation >= 10) {
+        if (newRadioStation >= 0 && newRadioStation < 11) {
             this.radioStation = 0;
             return;
         }
@@ -29,7 +29,7 @@ public class Radio {
         return radioStation;
     }
 
-    public void  increasePrev(){
+    public void increasePrev() {
         setRadioStationPrev(radioStation - 1);
     }
 
