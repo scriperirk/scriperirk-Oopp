@@ -53,11 +53,11 @@ public class Radio {
     }
 
     public void setRadioVolumeNext(int newRadioVolume) {
-        if (newRadioVolume >= 0 && newRadioVolume < 11) {
+        if (newRadioVolume >= 0 && newRadioVolume < 10) {
             this.radioVolume = newRadioVolume;
             return;
         }
-        if (newRadioVolume > 10) {
+        if (newRadioVolume >= 10) {
             this.radioVolume = 10;
         }
     }
@@ -72,7 +72,7 @@ public class Radio {
     }
 
     public void setRadioVolumePrev(int newRadioVolume) {
-        if (newRadioVolume >= 0 && newRadioVolume < 11) {
+        if (newRadioVolume >= 0 && newRadioVolume < 10) {
             this.radioVolume = newRadioVolume;
             return;
         }
