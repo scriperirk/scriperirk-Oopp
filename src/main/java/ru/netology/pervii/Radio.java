@@ -33,12 +33,12 @@ public class Radio {
         setRadioStationPrev(radioStation - 1);
     }
 
-    public void setRadioStationPrev(int newRadioStation) {
-        if (newRadioStation >= 0 && newRadioStation < 10) {
-            this.radioStation = newRadioStation;
+    public void setRadioStationPrev(int radioStation) {
+        if (radioStation >= 0 && radioStation < 10) {
+            this.radioStation = radioStation;
             return;
         }
-        if (newRadioStation < 0) {
+        if (radioStation < 0) {
             this.radioStation = 9;
         }
     }
@@ -52,12 +52,12 @@ public class Radio {
         setRadioVolumeNext(radioVolume + 1);
     }
 
-    public void setRadioVolumeNext(int newRadioVolume) {
-        if (newRadioVolume >= 0 && newRadioVolume < 10) {
-            this.radioVolume = newRadioVolume;
+    public void setRadioVolumeNext(int radioStation) {
+        if (radioStation >= 0 && radioStation < 10) {
+            this.radioVolume = radioStation;
             return;
         }
-        if (newRadioVolume >= 10) {
+        if (radioStation >= 10) {
             this.radioVolume = 10;
         }
     }
@@ -71,12 +71,12 @@ public class Radio {
         setRadioVolumePrev(radioVolume - 1);
     }
 
-    public void setRadioVolumePrev(int newRadioVolume) {
-        if (newRadioVolume >= 0 && newRadioVolume < 10) {
-            this.radioVolume = newRadioVolume;
+    public void setRadioVolumePrev(int radioVolume) {
+        if (radioVolume >= 0 && radioVolume < 10) {
+            this.radioVolume = radioVolume;
             return;
         }
-        if (newRadioVolume < 0) {
+        if (radioVolume < 0) {
             this.radioVolume = 0;
         }
     }
