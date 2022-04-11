@@ -49,31 +49,31 @@ public class RadioTest {
     }
 
     //громкость
+
     @Test
-    void increaseVolumeUnderMinimum() {
+    void increaseVolumeUnderMax() {
         Radio radio = new Radio();
         radio.increaseVolume();
         assertEquals(6, radio.getRadioVolume());
     }
 
     @Test
-    void increaseVolumeAboveMinimum() {
+    void increaseVolumeAboveMax() {
         Radio radio = new Radio();
         radio.setRadioVolume(10);
-        decreaseVolume();
+        radio.increaseVolume();
         assertEquals(10, radio.getRadioVolume());
     }
 
     @Test
-    void decreaseVolume() {
+    void increaseVolumeUnderMinimum() {
         Radio radio = new Radio();
         radio.decreaseVolume();
         assertEquals(4, radio.getRadioVolume());
     }
 
-
     @Test
-    void decreaseVolumeIfMin() {
+    void increaseVolumeAboveMinimum() {
         Radio radio = new Radio();
         radio.setRadioVolume(0);
         radio.decreaseVolume();
