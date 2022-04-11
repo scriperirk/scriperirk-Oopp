@@ -2,82 +2,69 @@ package ru.netology.pervii;
 
 public class Radio {
 
-    public int radioStation;
-    public int radioVolume;
+    private int radioVolume = 5;
+    int maxVolume = 10;
+    int minVolume = 0;
+    private int radioStation = 5;
+    int maxRadioStation = 9;
+    int minRadioStation = 0;
 
-    //увеличение Станций
-    public int getRadioStationNext() {
+    //Станция
+    public int getRadioStation() {
         return radioStation;
     }
 
-    public void increaseNext() {
-        setRadioStationNext(radioStation  + 1);
+    public void setRadioStation(int radioStation) {
+        this.radioStation = radioStation;
     }
 
-    public void setRadioStationNext(int radioStation) {
-         if (radioStation >= 0 && radioStation < 10) {
-            this.radioStation = radioStation;
-            return;
+    public int theStationByRemoteControl(int intendedStation) {
+        if (intendedStation <= 9 && intendedStation >= 0) {
+            radioStation = intendedStation;
         }
-        if (radioStation >= 10) {
-            this.radioStation = 0;
-        }
-    }
-
-    //уменьшение Станций
-    public int getRadioStationPrev() {
         return radioStation;
     }
 
-    public void increasePrev() {
-        setRadioStationPrev(radioStation - 1);
-    }
 
-    public void setRadioStationPrev(int radioStation) {
-        if (radioStation >= 0 && radioStation < 10) {
-            this.radioStation = radioStation;
-            return;
-        }
-        if (radioStation < 0) {
-            this.radioStation = 9;
+    public void theStationByNextButton() {
+        if (radioStation == maxRadioStation) {
+            radioStation = 0;
+        } else {
+            radioStation += 1;
         }
     }
 
-    //увеличение Громкости
-    public int getRadioVolumeNext() {
+    public void theStationByPrevButton() {
+        if (radioStation == minRadioStation) {
+            radioStation = 9;
+        } else {
+            radioStation -= 1;
+        }
+    }
+
+    //Громкость
+    public int getRadioVolume() {
         return radioVolume;
     }
 
-    public void increaseVolumeNext() {
-        setRadioVolumeNext(radioVolume + 1);
+    public void setRadioVolume(int radioVolume) {
+        this.radioVolume = radioVolume;
     }
 
-    public void setRadioVolumeNext(int radioStation) {
-        if (radioStation >= 0 && radioStation < 10) {
-            this.radioVolume = radioStation;
+    public void increaseVolume() {
+        if (radioVolume == maxVolume) {
             return;
+        } else {
+            radioVolume += 1;
         }
-        if (radioStation >= 10) {
-            this.radioVolume = 10;
-        }
     }
 
-    //уменьшение Громкости
-    public int getRadioVolumePrev() {
-        return radioVolume;
-    }
-
-    public void increaseVolumePrev() {
-        setRadioVolumePrev(radioVolume - 1);
-    }
-
-    public void setRadioVolumePrev(int radioVolume) {
-        if (radioVolume >= 0 && radioVolume < 10) {
-            this.radioVolume = radioVolume;
+    public void decreaseVolume() {
+        if (radioVolume == minVolume) {
             return;
-        }
-        if (radioVolume < 0) {
-            this.radioVolume = 0;
+        } else {
+            radioVolume -= 1;
+
         }
     }
 }
