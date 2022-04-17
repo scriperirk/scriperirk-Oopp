@@ -19,6 +19,12 @@ public class RadioTest {
     }
 
     @Test
+    void theStationByRemoteControlIfNumberIsWrongMinus() {
+        Radio radio = new Radio();
+        assertEquals(5, radio.theStationByRemoteControl(-1));
+    }
+
+    @Test
     void theStationByButtonNextIfCurrentIsNine() {
         Radio radio = new Radio();
         radio.setRadioStation(9);
